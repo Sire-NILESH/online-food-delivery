@@ -443,3 +443,131 @@
   text-align: center;
   margin-top: 4.8rem;
 }
+
+.plan-detail {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.feature-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #e67e22;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  background-color: #fae5d3;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* ****************************************** */
+/* CTA SECTION */
+/* ****************************************** */
+
+.section-cta {
+  padding: 9.6rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+  /* transition: all 0.4s; */
+
+  /* TEMP */
+  height: 50rem;
+}
+
+/* .cta:hover {
+  transform: scale(1.02);
+} */
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.301),
+      rgba(230, 125, 34, 0.301)
+    ),
+    url("../img/eating.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border-radius: 3px;
+  border: none;
+}
+
+.cta-form select {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  border-radius: 3px;
+
+  border: none;
+}
+
+.cta-form button {
+  border-radius: 9px;
+  border: none;
+  grid-column: 3/-3;
+  width: 70%;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  border-radius: 3px;
+
+  border: none;
+}
+
+.cta-form button:hover {
+  background-color: #fae5d3;
+}

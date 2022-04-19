@@ -237,7 +237,7 @@ body {
   margin-right: 1.6rem !important;
 }
 
-.margin-bottom-sm {
+.margin-bottom-md {
   /* since it is a helper class use the '!important' keyword. is a good practice for these helper classes*/
   margin-bottom: 4.8rem !important;
 }
