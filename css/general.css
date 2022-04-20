@@ -78,6 +78,15 @@ body {
   color: #555;
 }
 
+/* :focus styles on all at once */
+*:focus {
+  outline: none;
+  outline: 2px dashed rgba(230, 125, 34, 0.5);
+  outline-offset: 8px;
+  /* or */
+  /* box-shadow: 0 0 0 0.5rem rgba(230, 125, 34, 0.5); */
+}
+
 /* ****************************************** */
 /* GENERAL REUSABLE COMPONENTS */
 /* ****************************************** */
@@ -115,6 +124,10 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
@@ -156,13 +169,20 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
   text-decoration: none;
   font-size: 2rem;
   padding: 1.6rem 3.2rem;
-  border-radius: 0.9rem;
+  border-radius: 9px;
+  font-weight: 600;
+
+  /* only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* put transition on the original STATE */
   /* transition: background-color 300ms; */
@@ -191,6 +211,19 @@ body {
   background-color: #fdf2e9;
   /* color: #555; */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  /* it was a button inside a grid cell and by default they stretch to the cell height */
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,

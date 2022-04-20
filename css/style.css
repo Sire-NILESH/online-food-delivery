@@ -477,7 +477,7 @@
 /* ****************************************** */
 
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 12.8rem;
 }
 
 .cta {
@@ -490,7 +490,7 @@
   /* transition: all 0.4s; */
 
   /* TEMP */
-  height: 50rem;
+  /* height: 50rem; */
 }
 
 /* .cta:hover {
@@ -503,7 +503,8 @@
 }
 
 .cta .heading-secondary {
-  color: #45260a;
+  /* color: #45260a; */
+  color: inherit;
   margin-bottom: 3.2rem;
 }
 
@@ -539,35 +540,114 @@
   margin-bottom: 1.2rem;
 }
 
-.cta-form input {
-  width: 100%;
-  padding: 1.2rem;
-  font-size: 1.8rem;
-  border-radius: 3px;
-  border: none;
-}
-
+.cta-form input,
 .cta-form select {
+  /* input elements and some others do not inherit the font family by default. So force it to with 'inherit'. Can do it to others as well */
+  font-family: inherit;
+  color: inherit;
   width: 100%;
-  font-size: 1.8rem;
   padding: 1.2rem;
-  border-radius: 3px;
-
-  border: none;
-}
-
-.cta-form button {
+  font-size: 1.8rem;
   border-radius: 9px;
   border: none;
-  grid-column: 3/-3;
-  width: 70%;
-  font-size: 1.8rem;
-  padding: 1.2rem;
-  border-radius: 3px;
-
-  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fdf2e9;
 }
 
-.cta-form button:hover {
-  background-color: #fae5d3;
+/* placeholders are also pseudo elements. SO treat them like one*/
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+/* We cannot style the <select> menu and is OS specific */
+
+/* by default we have 'focus' that gives a blue outline that looks like a border but is actually not a part of the box model purely for accessibility purposes like keyboard only users for navigation. to style that  */
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgba(252, 241, 232, 0.5);
+}
+
+/* ****************************************** */
+/* FOOTER */
+/* ****************************************** */
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.contacts {
+  /* it was an address element, they get a default italic font-style */
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #767676;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  /* to apply spacing between, do either
+  1) give each link a margin-bottom and remove it from the :last-child
+  2) use Flex, flex's gap only applies to the col, so change the axis to make it now applied to rows.
+  */
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.6rem;
+  color: #767676;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
