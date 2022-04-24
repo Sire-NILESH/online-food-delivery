@@ -69,6 +69,10 @@ Medium: 11px
 html {
   /* this font size in % has to be in html{} else wont work and would not set the 'rem' and every measurement around wont work as expected */
   font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* does not work with safari */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -76,6 +80,7 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #555;
+  overflow-x: hidden;
 }
 
 /* :focus styles on all at once */
